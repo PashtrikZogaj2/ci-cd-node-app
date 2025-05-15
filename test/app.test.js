@@ -4,6 +4,6 @@ const app = require('../app');
 describe('GET /', () => {
   it('kthe tekstin korrekt', async () => {
     const res = await request(app).get('/');
-    expect(res.text).toBe('CI/CD pipeline me Node.js!');
+    expect(res.text).toBe('Hello from Pashtrik and Lorik');
   });
 });
