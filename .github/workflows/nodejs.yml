@@ -12,22 +12,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
       - name: Check node version
         run: node -v
-
       - name: Check npm version
         run: npm -v
-
-      - name: Install dependencies
-        run: npm install
-        env:
-          NODE_ENV: development
-
+      - run: npm install
+      - name: Give permission to jest
+        run: chmod +x ./node_modules/.bin/jest
       - name: Run tests
         run: npx jest
