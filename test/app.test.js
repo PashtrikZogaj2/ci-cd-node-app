@@ -50,6 +50,4 @@ describe('POST, PUT, DELETE /todos', () => {
 
     expect(res.statusCode).toBe(204);
   });
-
- 
 });
