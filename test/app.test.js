@@ -50,4 +50,9 @@ describe('POST, PUT, DELETE /todos', () => {
 
     expect(res.statusCode).toBe(204);
   });
+
+  // ❌ Test që dështon me qëllim për të treguar CI në veprim
+  it('test që dështon me qëllim', () => {
+    expect('CI/CD').toBe('DevOps'); // kjo do të dështojë me qëllim
+  });
 });

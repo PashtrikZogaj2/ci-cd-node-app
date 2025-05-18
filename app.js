@@ -31,7 +31,6 @@ app.get('/users', (req, res) => {
   `);
 });
 
-// POST todo
 app.post('/todos', (req, res) => {
   const newTodo = {
     id: Date.now(),
@@ -41,7 +40,6 @@ app.post('/todos', (req, res) => {
   res.status(201).json(newTodo);
 });
 
-// PUT todo
 app.put('/todos/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const todo = todos.find(t => t.id === id);
@@ -50,7 +48,6 @@ app.put('/todos/:id', (req, res) => {
   res.json(todo);
 });
 
-// DELETE todo
 app.delete('/todos/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const index = todos.findIndex(t => t.id === id);
